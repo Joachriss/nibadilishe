@@ -9,10 +9,10 @@ export const Navbar = () => {
     // const inActive = "'bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium'";
     // const notActive="'rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white'";
     return (
-        <header className="sticky top-0 w-full bg-slate-50">
+        <header className="sticky z-10 top-0 w-full bg-slate-50">
             <nav className="border-b-2 border-black">
                 {/* DESKTOP NAV */}
-                <div className="relative max-w-[1240px] mx-auto flex flex-row items-center h justify-between py-4 px-3">
+                <div className="relative max-w-[1290px] mx-auto flex flex-row items-center h justify-between py-4 px-3">
                     <div className="flex flex-shrink-0 items-center">
                         <img className="h-8 w-auto" src={nibadilishe} sizes="100" alt="Company logo" />
                     </div>

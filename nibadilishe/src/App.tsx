@@ -4,14 +4,18 @@ import { WhoWeAreCard } from './components/WhoWeAreCard';
 import { EventCard } from './components/EventCard';
 import { Navbar } from './components/Navbar';
 import { GoArrowRight } from "react-icons/go";
+import { Footer } from './components/Footer';
+import dummy from './assets/images/dummy.jpg'
+
+
 
 function App() {
 
   return (
     <>
       <Navbar/>
-      <div className="w-full mt-4 mb-48">
-        <div className="mx-auto max-w-[1140px] flex flex-col space-y-5">
+      <div className="w-full mt-4">
+        <div className="mx-auto max-w-[1200px] flex flex-col space-y-5">
           {/* hero portion */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3">
             <div>
@@ -21,22 +25,24 @@ function App() {
               <div className="md:text-3xl text-xl text-center md:text-start font-[400] mt-4">
                 Empower. Advocate. Inspire. Join EcoBuilders, where youths amplify change for a sustainable future.
               </div>
-              <button className="rounded-md md:mx-0 mx-auto mt-6 bg-[#F05A28] flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#b4502f]" aria-current="page">
+              <button className="rounded-md md:mx-0 mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">
                 <span>Who are we?</span> <GoArrowRight/>
               </button>
             </div>
-            <img src="" className='rounded mx-auto' alt="team picture" />
+            <img src={dummy} className='rounded mx-auto' alt="team picture" />
           </div>
 
           {/* what we do */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3">
             <div className="col-span-2">
-              <div className='text-center text-[#F05A28] font-[500] md:text-4xl text-3xl'>What we do</div>
+              <div className='text-center mt-14 text-[#F05A28] font-[500] md:text-4xl text-3xl'>What we do</div>
               {/* <div className='text-center text-[#1EA74A] text-2xl md:text-2xl'>What we do</div> */}
               <div className=" text-2xl md:text-2xl text-center font-[500] text-[#38466d] mb-5">
                 NIBADILISHE is centered around:
               </div>
             </div>
+            <WhoWeAreCard/>
+            <WhoWeAreCard/>
             <WhoWeAreCard/>
             <WhoWeAreCard/>
           </div>
@@ -56,19 +62,20 @@ function App() {
         </div>
 
         {/* what we do */}
-        <div className="max-w-[1140px] mx-auto">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 px-3">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 mx-auto gap-y-5 md:gap-5 md:gap-y-0 md:grid-cols-3 px-3 justify-center md:justify-between">
             <div className="col-span-3">
               <div className='text-center text-[#F05A28] font-[500] md:text-4xl text-3xl'>Events</div>
-              {/* <div className='text-center text-[#1EA74A] text-2xl md:text-2xl'>What we do</div> */}
               <div className=" text-2xl md:text-2xl text-center font-[500] text-[#38466d] mb-5">
                 Our upcoming & completed events
               </div>
             </div>
             <EventCard/>
             <EventCard/>
+            <EventCard/>
           </div>
         </div>
+        <Footer/>
       </div>
     </>
   )
