@@ -2,12 +2,12 @@ import { useState } from "react"
 import nibadilishe from '../assets/images/Nibadilishe.png';
 import ScrollToTop from "react-scroll-to-top";
 import { Totop } from "./Totop";
-// import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
     const [nav,setNav]= useState(false);
-    // const inActive = "'bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium'";
-    // const notActive="'rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white'";
+    const inActive = "' bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium'";
+    const notActive="'rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white'";
     return (
         <header className="sticky z-10 top-0 w-full bg-slate-50">
             <nav className="border-b-2 border-black">
@@ -19,20 +19,10 @@ export const Navbar = () => {
                     <div className="hidden sm:ml-6 lg:block">
                         <div className="flex space-x-2 md:space-x-4">
                             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                            <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-[#38466D] hover:bg-gray-700 hover:text-white">Home</a>
-                            <a className={`rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white`} >About us</a>
-                            {/* <NavLink
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? inActive
-                                        : notActive
-                                }
-                                to="/about"
-                            >
-                                About us
-                            </NavLink> */}
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/" >Home</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/AboutUs" >About us</NavLink>
                             <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
-                            <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Our events</a>
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/events" >Events</NavLink>
                             <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Gallery</a>
                             <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Contact Us</a>
                             <a href="#" className="rounded-md bg-[#F05A28] px-4 py-3 text-md font-medium text-white" aria-current="page">Donate</a>
@@ -78,10 +68,10 @@ export const Navbar = () => {
                         <div className="sm:ml-6 mt-6">
                             <div className="flex flex-col space-y-4">
                                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                                <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Home</a>
+                                <Link to="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Home</Link>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">About us</a>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
-                                <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Our events</a>
+                                <NavLink to="/events" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Our events</NavLink>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Gallery</a>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Contact Us</a>
                                 <div  className="rounded-md text-center   bg-[#F05A28] px-4 py-5 text-md font-medium text-white" aria-current="page">Donate</div>
