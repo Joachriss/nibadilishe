@@ -5,6 +5,8 @@ import './index.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import { RouterErrorPage } from './pages/RouterErrorPage.tsx';
 import { Events } from './pages/Events.tsx';
+import { Contacts } from './pages/Contacts.tsx';
+import { AboutUs } from './pages/AboutUs.tsx';
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,16 @@ const router = createBrowserRouter([
     errorElement:<RouterErrorPage/>
   },
   {
-    path:'/events',
+    path:'/Our_Events',
     element:<Events/>
+  },
+  {
+    path:'/Contact_Us',
+    element:<Contacts/>
+  },
+  {
+    path:'/About_Us',
+    element:<AboutUs/>
   }
 ]);
 

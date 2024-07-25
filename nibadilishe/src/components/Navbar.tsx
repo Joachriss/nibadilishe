@@ -6,25 +6,25 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
     const [nav,setNav]= useState(false);
-    const inActive = "' bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium'";
-    const notActive="'rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white'";
+    const inActive = "' bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium '";
+    const notActive="' rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white duration-150 ease-in-out '";
     return (
         <header className="sticky z-10 top-0 w-full bg-slate-50">
             <nav className="border-b-2 border-black">
                 {/* DESKTOP NAV */}
                 <div className="relative max-w-[1290px] mx-auto flex flex-row items-center h justify-between py-4 px-3">
                     <div className="flex flex-shrink-0 items-center">
-                        <img className="h-8 w-auto" src={nibadilishe} sizes="100" alt="Company logo" />
+                        <Link to='/'><img className="h-8 w-auto" src={nibadilishe} sizes="100" alt="Organization logo" /></Link>
                     </div>
                     <div className="hidden sm:ml-6 lg:block">
                         <div className="flex space-x-2 md:space-x-4">
                             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/" >Home</NavLink>
-                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/AboutUs" >About us</NavLink>
-                            <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
-                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/events" >Events</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/About_Us" >About us</NavLink>
+                            <NavLink to="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</NavLink>
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                             <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Gallery</a>
-                            <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Contact Us</a>
+                            <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>
                             <a href="#" className="rounded-md bg-[#F05A28] px-4 py-3 text-md font-medium text-white" aria-current="page">Donate</a>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export const Navbar = () => {
                                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                                 <Link to="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Home</Link>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">About us</a>
-                                <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
+                                <a href="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
                                 <NavLink to="/events" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Our events</NavLink>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Gallery</a>
                                 <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Contact Us</a>

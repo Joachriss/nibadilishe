@@ -1,4 +1,3 @@
-// import ScrollToTop from 'react-scroll-to-top';
 import './App.css';
 import { WhoWeAreCard } from './components/WhoWeAreCard';
 import { EventCard } from './components/EventCard';
@@ -29,11 +28,11 @@ function App() {
                 <span>Who are we?</span> <GoArrowRight/>
               </button>
             </div>
-            <img src={dummy} className='rounded mx-auto' alt="team picture" />
+            <img src={dummy} className='rounded-es-[100px] mx-auto' alt="team picture" />
           </div>
 
           {/* what we do */}
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3">
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3" id="whatWeDo">
             <div className="col-span-2">
               <div className='text-center mt-14 text-[#F05A28] font-[500] md:text-4xl text-3xl'>What we do</div>
               {/* <div className='text-center text-[#1EA74A] text-2xl md:text-2xl'>What we do</div> */}
@@ -73,6 +72,11 @@ function App() {
             <EventCard/>
             <EventCard/>
             <EventCard/>
+            <div className="col-span-3 mt-5">
+              <button className="rounded-md mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">
+                <span>View more</span> <GoArrowRight/>
+              </button>
+            </div>
           </div>
         </div>
         <Footer/>
@@ -81,4 +85,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
