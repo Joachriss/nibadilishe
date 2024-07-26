@@ -25,7 +25,7 @@ export const Navbar = () => {
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                             <a href="#" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Gallery</a>
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>
-                            <a href="#" className="rounded-md bg-[#F05A28] px-4 py-3 text-md font-medium text-white" aria-current="page">Donate</a>
+                            <NavLink to="/Donate" className="rounded-md bg-[#F05A28] px-4 py-3 text-md font-medium text-white" aria-current="page">Donate</NavLink>
                         </div>
                     </div>
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">

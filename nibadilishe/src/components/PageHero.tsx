@@ -12,7 +12,7 @@ export const PageHero = (props: {
                     <div className='flex fle-row text-gray-500 font-[500] md:text-lg text-sm my-3'>
                         <Link to="/" className="flex flex-row items-center"><IoMdHome />Home</Link>/{props.page}
                     </div>
-                    <div className='text-center text-[#F05A28] font-[500] md:text-4xl text-3xl mb-3'>{props.title}</div>
+                    <div className='text-center text-[#F05A28] font-[700] md:text-4xl text-3xl mb-3'>{props.title}</div>
                     <div className=" text-lg md:text-xl text-center font-[500] text-[#38466d] mb-5">
                         {props.description}
                     </div>

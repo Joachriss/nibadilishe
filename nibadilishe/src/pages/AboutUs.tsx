@@ -38,7 +38,7 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                         </div> */}
-                        <div className="col-span-full flex flex-col md:flex-row space-y-3 md:space-x-3 item">
+                        <div className="col-span-full flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 item">
                             <div className="bg-white p-5 rounded-lg shadow-lg border-l-8 border-l-[#1EA74A] ">
                                 <div className=' text-[#38466d] font-[700] my-2 md:text-3xl text-2xl'>Mission</div>
                                 <div className="text-justify text-lg font-[500] text-[#38466d] mb-5">
@@ -71,7 +71,7 @@ export const AboutUs = () => {
                 </div>
             </div>
             <div className="relative w-full bg-[url('./assets/images/aboutUsBg.jpeg')] my-5 bg-top bg-fixed bg-cover h-[400px] md:h-72">
-                <div className="absolute h-full w-full bg-black bg-opacity-50 p-2 md:p-20">
+                <div className="absolute h-full w-full bg-[rgba(0,0,0,0.6)] p-2 md:p-20">
                     <div className="bg-transparent rounded-lg text-center">
                         <div className=' text-[#FFF] font-[900] mb-2 md:text-3xl text-2xl pt-8 md:pt-0'>Background</div>
                         <div className=" text-center text-xl font-[700] text-[#FFF] mb-5">

@@ -7,6 +7,7 @@ import { RouterErrorPage } from './pages/RouterErrorPage.tsx';
 import { Events } from './pages/Events.tsx';
 import { Contacts } from './pages/Contacts.tsx';
 import { AboutUs } from './pages/AboutUs.tsx';
+import { Donation } from './pages/Donation.tsx';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path:'/About_Us',
     element:<AboutUs/>
+  },
+  {
+    path:'/Donate',
+    element:<Donation/>
   }
 ]);
 
