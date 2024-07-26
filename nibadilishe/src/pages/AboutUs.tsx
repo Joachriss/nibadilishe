@@ -1,26 +1,27 @@
 import { Footer } from "../components/Footer"
 import { Navbar } from "../components/Navbar"
+import { PageHero } from "../components/PageHero"
 
 export const AboutUs = () => {
     return (
         <div>
             <Navbar />
+            <PageHero
+                page="About us"
+                title="Who are we?"
+                description="
+                 We are an impact organization led by women,
+                committed to driving positive change in our
+                community. Through a variety of initiatives, we
+                address critical social and environmental issues
+                such as health, gender-based violence, and climate
+                change. Our approach involves active engagement
+                with local communities, raising awareness, and
+                implementing practical solutions for a brighter,
+                more sustainable future."
+            />
             <div className="max-w-[1200px] mx-auto">
                 <div className="grid grid-cols-1 mx-auto gap-y-5 md:gap-5 md:gap-y-0 md:grid-cols-3 px-3 justify-center md:justify-between">
-                    <div className="col-span-full my-5">
-                        <div className='text-center text-[#F05A28] font-[500] md:text-4xl text-3xl'>About us</div>
-                        <div className=" text-xl md:text-2xl text-center font-[500] text-[#38466d] mb-5">
-                            We are an impact organization led by women,
-                            committed to driving positive change in our
-                            community. Through a variety of initiatives, we
-                            address critical social and environmental issues
-                            such as health, gender-based violence, and climate
-                            change. Our approach involves active engagement
-                            with local communities, raising awareness, and
-                            implementing practical solutions for a brighter,
-                            more sustainable future.
-                        </div>
-                    </div>
                     <div className="col-span-full grid grid-cols-1 md:grid-cols-2 gap-3">
                         {/* <div className="col-span-1 flex items-center">
                             <div className="bg-white p-5 rounded-lg shadow-lg border-l-8 border-l-[#38466d] ">

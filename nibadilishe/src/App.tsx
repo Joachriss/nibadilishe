@@ -5,6 +5,7 @@ import { Navbar } from './components/Navbar';
 import { GoArrowRight } from "react-icons/go";
 import { Footer } from './components/Footer';
 import dummy from './assets/images/dummy.jpg'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -73,9 +74,9 @@ function App() {
             <EventCard/>
             <EventCard/>
             <div className="col-span-3 mt-5">
-              <button className="rounded-md mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">
+              <NavLink to="/Our_events" className="rounded-md w-fit mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">
                 <span>View more</span> <GoArrowRight/>
-              </button>
+              </NavLink>
             </div>
           </div>
         </div>
