@@ -6,7 +6,7 @@ export const PageHero = (props: {
     title: ReactNode; page: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined; 
 }) => {
     return (
-        <div className="w-full">
+        <div className="w-full mb-5">
             <div className="mx-auto max-w-[1200px] px-5 md:px-2">
                 <div className="flex flex-col">
                     <div className='flex fle-row text-gray-500 font-[500] md:text-lg text-sm my-3'>

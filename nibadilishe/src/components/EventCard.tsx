@@ -27,7 +27,6 @@ export const EventCard = () => {
                 </button>
                 <button className="rounded-md space-x-1 ms-5 mb-3 border-2 bg-[#F05A28] flex flex-row items-center px-4 py-1 text-md font-medium text-[#FFF]" aria-current="page">
                     <span>In progress</span><AiOutlineLoading className="duration-500 animate-spin"/>
-
                 </button>
             </div> 
         </div>

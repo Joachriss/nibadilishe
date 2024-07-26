@@ -4,8 +4,7 @@ import { EventCard } from './components/EventCard';
 import { Navbar } from './components/Navbar';
 import { GoArrowRight } from "react-icons/go";
 import { Footer } from './components/Footer';
-import dummy from './assets/images/dummy.jpg'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -14,23 +13,22 @@ function App() {
   return (
     <>
       <Navbar/>
-      <div className="w-full mt-4">
-        <div className="mx-auto max-w-[1200px] flex flex-col space-y-5">
+      <div className="w-full">
           {/* hero portion */}
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3">
-            <div>
-              <div className="md:text-5xl text-3xl text-center md:text-start font-[500] text-[#38466d]">
+          <div className="grid h-screen items-center gap-5 md:grid-cols-2 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
+            <div className='md:ps-10 -mt-20'>
+              <div className="md:text-5xl text-3xl text-center md:text-start font-[500] text-[#FFF]">
                 Empower youths today to be strong leaders tomorrow.
               </div>
-              <div className="md:text-3xl text-xl text-center md:text-start font-[400] mt-4">
+              <div className="md:text-3xl text-xl text-center md:text-start font-[400] mt-4 text-white">
                 Empower. Advocate. Inspire. Join EcoBuilders, where youths amplify change for a sustainable future.
               </div>
               <button className="rounded-md md:mx-0 mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">
                 <span>Who are we?</span> <GoArrowRight/>
               </button>
             </div>
-            <img src={dummy} className='rounded-es-[100px] mx-auto' alt="team picture" />
           </div>
+        <div className="mx-auto max-w-[1240px] flex flex-col space-y-5">
 
           {/* what we do */}
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3" id="whatWeDo">
@@ -54,9 +52,9 @@ function App() {
               <div className='text-lg'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur perferendis provident nemo.um, magnam repellendus, tempore possimus pariatur blanditiis nam?</div>
             </div>
             <div className="col-span-4 md:col-span-1 flex items-center justify-center">
-              <button className="rounded-md  md:mx-0 mx-auto mt-6 text-[#F05A28] flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium bg-white hover:font-bold hover:text-[#b4502f]" aria-current="page">
+              <Link to="/contact_Us" className="rounded-md  md:mx-0 mx-auto mt-6 text-[#F05A28] flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium bg-white hover:font-bold hover:text-[#b4502f]" aria-current="page">
                 <span>Contact us</span> <GoArrowRight/>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
