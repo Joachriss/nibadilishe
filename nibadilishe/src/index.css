@@ -5,7 +5,11 @@
 @font-face {
     font-family: 'quicksand';
     src: local('Quicksand Book'), url(./assets/font/Quicksand_Book.otf) format('opentype');
-  }
+}
+@font-face {
+    font-family: 'quicksand-bold';
+    src: local('Quicksand Bold'), url(./assets/font/Quicksand_Bold.otf) format('opentype');
+}
 
 body {
     margin: 0;

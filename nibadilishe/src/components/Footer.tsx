@@ -1,6 +1,7 @@
 import nibadilishe from '../assets/images/Nibadilishe.png'
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter} from "react-icons/bs";
 import { NewsPaper } from './NewsPaper';
+import { NavLink } from 'react-router-dom';
 export const Footer = () => {
   return (
     <footer className="w-full mt-5 py-5">
@@ -17,7 +18,7 @@ export const Footer = () => {
             </div>
 
             <div className="col-span-2 items-center md:mx-auto md:items-start flex justify-center my-5">
-                <div className="md:text-xl text-end text-sm font-bold text-gray-500 w-fit">Contact us</div>
+                <NavLink to='/Contact_us' className="md:text-xl text-end text-sm font-bold text-gray-500 w-fit hover:text-gray-900">Contact us</NavLink>
                 <div className="min-h-full md:min-h-[40px] border-2 mx-3 border-black"/>
                 <div className="md:text-xl text-sm font-bold text-gray-500">Terms of service</div>
                 <div className="min-h-full md:min-h-[40px] border-2 mx-3 border-black"/>

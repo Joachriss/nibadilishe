@@ -8,7 +8,7 @@ export const NewsPaper = () => {
                 <div className="text-center w-full bg-[#d6d6d6] px-12 py-14 text-white my-10">
                     <div className="grid grid-cols-4">
                         <div className="col-span-4">
-                            <div className="text-2xl mb-4 text-[#38466d]">Our Newsletter</div>
+                            <div className="text-2xl mb-4 font-['quicksand-bold'] text-[#38466d]">Our Newsletter</div>
                             <div className='text-lg text-gray-700'>Subscribe to our weekly newsletter to get updates on events and opportunities.</div>
                         </div>
                         <div className="col-span-4 mt-7 flex flex-col md:flex-row items-center justify-center">

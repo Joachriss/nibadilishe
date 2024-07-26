@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import App from './pages/App.tsx';
 import './index.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import { RouterErrorPage } from './pages/RouterErrorPage.tsx';
@@ -8,6 +8,7 @@ import { Events } from './pages/Events.tsx';
 import { Contacts } from './pages/Contacts.tsx';
 import { AboutUs } from './pages/AboutUs.tsx';
 import { Donation } from './pages/Donation.tsx';
+import { Gallery } from './pages/Gallery.tsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path:'/Donate',
     element:<Donation/>
+  },
+  {
+    path:'/Gallery',
+    element:<Gallery/>
   }
 ]);
 
