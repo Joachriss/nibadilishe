@@ -8,7 +8,8 @@ import { TypeAnimation } from 'react-type-animation';
 import picha01 from '../assets/gallery/WhatsAppImage2024-06-15at17.46.23.jpeg';
 import picha02 from '../assets/gallery/WhatsAppImage2024-06-15at17.46.44.jpeg';
 import picha03 from '../assets/gallery/WhatsAppImage2024-06-15at17.46.43.jpeg';
-
+import ScrollAnimation from 'react-animate-on-scroll';
+import 'animate.css/animate.compat.css';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
     { id: 2, name: 'NISITIRI BINTI CAMPAIGN', image: picha02, isCompleted: true, date: '2023-02-22', description: 'The "Nisitiri Binti" campaign is centered around the donation of underwear to girls and women in need. By providing clean and quality underwear, the campaign aims to address a fundamental aspect of menstrual hygiene management and empower girls and women to navigate their periods with comfort and dignity.' },
     { id: 3, name: 'FLASH BACK TO SCHOOL', image: picha03, isCompleted: false, date: '2024-02-12', description: '"Flashback to School" is an initiative by Nibadilishe that focuses on providing all the necessary school materials to children from low-income communities. The aim of this campaign is to ensure that every child has access to quality education by removing the financial barrier associated with purchasing school supplies. Through "Flashback to School," Nibadilishe distributes items such as textbooks, notebooks, stationery, backpacks, and uniforms to students in need, enabling them to fully engage in their learning and pursue their academic goals. By addressing the material needs of these students, the campaign seeks to promote educational equity and empower children from marginalized backgrounds to reach their full potential.' }
   ]
+
   return (
     <>
       <Navbar />
@@ -31,14 +33,14 @@ function App() {
         {/* hero portion */}
         <div className="grid h-screen items-center gap-5 md:grid-cols-2 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
           <div className='md:ps-10 -mt-20'>
-            <div className="md:text-5xl text-3xl text-center md:text-start font-['quicksand-bold'] font-[500] text-[#FFF]">
+            <ScrollAnimation animatePreScroll={true} animateOut='fadeOut' offset={200}  duration={2} animateIn='slideInLeft' className="md:text-5xl text-3xl text-center md:text-start font-['quicksand-bold'] font-[500] text-[#FFF]">
               {/* Empowering women, driving change through health, equality, and climate action. */}
               Empowering communities for a sustainable future. <br />
               Impact-driven NGO led by youth.
 
-            </div>
+            </ScrollAnimation>
             <div className="md:text-3xl text-xl text-center md:text-start font-[400] mt-4 text-white">
-              Together we tackle health gender equality, climate change and more <br />
+              <ScrollAnimation animateIn='slideInDown'>Together we tackle health gender equality, climate change and more</ScrollAnimation> <br />
               <TypeAnimation
                 sequence={['Empowerment', 3000, 'Equality', 3000, 'Sustainability', 3000]}
                 wrapper="span"
@@ -64,7 +66,7 @@ function App() {
                 NIBADILISHE is centered around:
               </div>
             </div>
-
+            
             {whoWeAreList.map((item) => <WhoWeAreCard key={item.id} objective={item.objective} description={item.description} color={item.color} />)}
 
           </div>

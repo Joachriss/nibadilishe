@@ -15,14 +15,14 @@ export const PictureGallery = () => {
     const onInit = () => {
         console.log('lightGallery has been initialized');
     };
-  return (
-    <div className='App'>
-        <LightGallery
+    return (
+        <div className='App'>
+            <LightGallery
                 elementClassNames="grid grid-cols-2 md:grid-cols-3 gap-2 items-center"
                 onInit={onInit}
                 speed={500}
                 plugins={[lgThumbnail, lgZoom]}
-                
+
             >
                 <a href={sawa} className='w-fit'>
                     <img alt="img1" src={sawa} />
@@ -37,6 +37,6 @@ export const PictureGallery = () => {
                     <img alt="img2" src={beach} />
                 </a>
             </LightGallery>
-    </div>
-  )
+        </div>
+    )
 }
