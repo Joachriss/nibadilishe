@@ -30,11 +30,11 @@ export const Contacts = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat optio atque repellendus fuga eligendi aut voluptatibus nemo labore, impedit ipsam.
                         </div>
                         <div className="flex flex-col text-start space-y-5">
-                            <div className="flex flex-row items-center ">
+                            <div className="flex flex-row items-center">
                                 <FaLocationDot size={40} />
                                 <div className="ps-4">
                                     <span className=" text-lg font-bold">Location</span><br />
-                                    <span className=" text-lg">consectetur adipisicing eliacere qui eliacere qui tempore earum</span>
+                                    <span className=" text-lg">Pundamilia street – Sinza vattican, Dar es Salaam, Tanzania</span>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center">
@@ -48,7 +48,8 @@ export const Contacts = () => {
                                 <MdEmail size={40} />
                                 <div className="ps-4">
                                     <span className=" text-lg font-bold">E-Mail</span><br />
-                                    <span className=" text-lg">joachriss@gmail.com</span>
+                                    <span className=" text-lg">info@nibadilishe.or.tz</span><br />
+                                    <span className=" text-lg">nibadilisheorganization@gmail.com</span>
                                 </div>
                             </div>
                             <hr className="border-2 border-gray-600" />

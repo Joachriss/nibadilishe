@@ -61,9 +61,9 @@ export const Navbar = () => {
                     </div>
                     <div className={`border-e-2 fixed lg:hidden top-0 ${nav ? "start-0" : "-start-[70vw]"} w-[70vw] ease-in-out duration-200  border-orange-600  bg-white block h-full py-4 px-3`}>
                         <div className="flex flex-row justify-between mt-3">
-                            <div className="flex flex-shrink-0 items-center">
+                            <NavLink to='/' className="flex flex-shrink-0 items-center">
                                 <img className="h-8 w-auto" src={nibadilishe} sizes="100" alt="Organization logo" />
-                            </div>
+                            </NavLink>
                             <svg onClick={navToggle} className="block  h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
