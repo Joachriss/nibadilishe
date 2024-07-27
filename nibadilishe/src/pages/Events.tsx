@@ -28,7 +28,7 @@ export const Events = () => {
             />
             <div className="max-w-[1200px] mx-auto">
                 <div className="grid grid-cols-1 mx-auto gap-3 md:grid-cols-3 px-3 justify-center md:justify-between">
-                    {eventLIsts.map((items)=><EventCard picture={items.image} name={items.name} date={items.date} description={items.description} isCompleted={items.isCompleted} />)}
+                    {eventLIsts.map((items)=><EventCard key={items.id} picture={items.image} name={items.name} date={items.date} description={items.description} isCompleted={items.isCompleted} />)}
                     
                 </div>
             </div>

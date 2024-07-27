@@ -96,7 +96,7 @@ function App() {
               </div>
             </div>
 
-            {eventLIst.map((details) => <EventCard picture={details.image} name={details.name} date={details.date} description={details.description} isCompleted={details.isCompleted} />)}
+            {eventLIst.map((details) => <EventCard key={details.id} picture={details.image} name={details.name} date={details.date} description={details.description} isCompleted={details.isCompleted} />)}
 
             <div className="col-span-3 mt-5">
               <NavLink to="/Our_events" className="rounded-md w-fit mx-auto mt-6 bg-[#1EA74A] shadow-xl flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-white hover:bg-[#278d47]" aria-current="page">

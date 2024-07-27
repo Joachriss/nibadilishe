@@ -28,7 +28,7 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
                     {props.description}
                 </div>
             </div> 
-            <button  onClick={viewMore} className="absolute bottom-1 left-1 rounded-md mt-6 ms-5 mb-3 flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-[#F05A28] hover:scale-[1.1] ease-in-out duration-200 hover:text-[#b4502f]" aria-current="page">
+            <button  onClick={viewMore} className="absolute bottom-1 right-1 rounded-md mt-6 ms-5 mb-3 flex flex-row items-center space-x-2 px-4 py-2 text-md font-medium text-[#F05A28] hover:scale-[1.1] ease-in-out duration-200 hover:text-[#b4502f]" aria-current="page">
                 <span>Read more</span> <GoArrowRight/>
             </button>
             <div className="absolute top-3 end-3">
