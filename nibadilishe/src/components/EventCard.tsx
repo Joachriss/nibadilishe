@@ -2,8 +2,9 @@ import { GoArrowRight } from "react-icons/go"
 // import { NavLink } from "react-router-dom"
 import { FaCheckCircle } from "react-icons/fa";
 import { AiOutlineLoading } from "react-icons/ai";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, useState } from "react";
-import ScrollAnimation from "react-animate-on-scroll";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const EventCard = (props: { picture: string | undefined; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; date: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; description: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; isCompleted: any; }) => {
     const [width,setWidth]=useState('line-clamp-4')
@@ -14,9 +15,13 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
             setWidth('line-clamp-4')
         }
     }
+
+    useEffect(()=>{
+        AOS.init();
+    })
     return (
     // <NavLink to={""}>
-        <ScrollAnimation animateIn="slideInUp" offset={150} duration={1.5} className="col-span-full group mx-auto md:mx-0 md:col-span-1 shadow-xl relative bg-white px-0 rounded-lg border-b-2 border-b-[#F05A28] ">
+        <div data-aos="fade-up" data-aos-duration="1000" className="col-span-full group mx-auto md:mx-0 md:col-span-1 shadow-xl relative bg-white px-0 rounded-lg border-b-2 border-b-[#F05A28] ">
             <div className="mx-auto flex flex-col overflow-hidden">
                 <div className="overflow-hidden h-[200px]">
                     <img src={props.picture} className="mx-auto rounded aspect-auto group-hover:scale-105 duration-200" alt="Event picture" />
@@ -48,7 +53,7 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
                 
                 
             </div> 
-        </ScrollAnimation>
+        </div>
     // </NavLink>
   )
 }

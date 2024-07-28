@@ -1,9 +1,15 @@
+import { useEffect } from "react"
 import { Footer } from "../components/Footer"
 import { Navbar } from "../components/Navbar"
 import { PageHero } from "../components/PageHero"
 import { TeamCard } from "../components/TeamCard"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export const AboutUs = () => {
+    useEffect(()=>{
+        AOS.init();
+    })
     return (
         <div className="w-full">
             <Navbar />
@@ -35,8 +41,8 @@ export const AboutUs = () => {
             </div>
             <div className=" w-full bg-[url('./assets/images/aboutUsBg.jpeg')] my-10 bg-top  bg-fixed min-h-[450px] bg-cover md:h-72">
                 <div className=" rounded-lg flex flex-col items-center bg-[rgba(0,0,0,0.6)] py-12 justify-center h-full md:py">
-                    <div className=" text-[#FFF] font-[900] mb-2 md:text-6xl text-2xl mt-10 md:pt-0 font-['quicksand-bold']">Background</div>
-                    <div className=" text-center text-2xl font-[700] text-[#FFF] mb-10">
+                    <div data-aos="fade-up" data-aos-duration="1000" className=" text-[#FFF] font-[900] mb-2 md:text-6xl text-2xl mt-10 md:pt-0 font-['quicksand-bold']">Background</div>
+                    <div data-aos="fade-up" data-aos-duration="1000" className=" text-center text-2xl font-[700] text-[#FFF] mb-10">
                         In Dar es Salaam, Tanzania, Sophia Evodius founded
                         Stand With Girls in 2018 to empower girls and
                         women, addressing challenges and inequalities. In

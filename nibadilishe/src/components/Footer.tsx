@@ -2,12 +2,19 @@ import nibadilishe from '../assets/images/Nibadilishe.png'
 import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter} from "react-icons/bs";
 import { NewsPaper } from './NewsPaper';
 import { NavLink } from 'react-router-dom';
-import ScrollAnimation from 'react-animate-on-scroll';
+import AOS from 'aos';
+
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 export const Footer = () => {
+    useEffect(()=>{
+        AOS.init();
+    })
   return (
-    <ScrollAnimation animateIn='slideInUp' duration={2} className="w-full mt-5 py-5">
+    <div className="w-full mt-5 py-5">
         <NewsPaper/>
-        <div className="grid md:grid-cols-3 px-6 grid-cols-1">
+        <div data-aos='fade-up' data-aos-duration="1000" className="grid md:grid-cols-3 px-6 grid-cols-1">
             <div className="col-span-1 flex flex-col md:items-start items-center">
                 <img src={nibadilishe} className='md:w-[70%] w-[60%]' alt="" />
                 <div className="mt-4 flex space-x-4 px-4 flex-row items-center ">
@@ -29,6 +36,6 @@ export const Footer = () => {
         <hr className='border-[1px] my-4 border-[#0c02026c]'/>
         <div className="text-center text-sm font-bold text-gray-500 mt-4">Created by: <a href="https://ikoncreatives.com" className='text-gray-800'>IkonCreatives</a></div>
         <div className="text-center text-sm font-bold text-gray-500">NIBADILISHE © {new Date().getFullYear()}</div>
-    </ScrollAnimation>
+    </div>
   )
 }

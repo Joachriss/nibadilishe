@@ -1,10 +1,15 @@
+import Aos from "aos";
+import { useEffect } from "react"
 import { GoArrowRight } from "react-icons/go"
 
 
 export const NewsPaper = () => {
+    useEffect(()=>{
+        Aos.init();
+    })
     return (
         <div>
-            <form action="">
+            <form  data-aos-duration="800"  data-aos="fade-up" action="">
                 <div className="text-center w-full bg-[#d6d6d6] px-12 py-14 text-white my-10">
                     <div className="grid grid-cols-4">
                         <div className="col-span-4">
