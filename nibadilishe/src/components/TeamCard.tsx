@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export const TeamCard = () => {
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
         <div data-aos="flip-right" data-aos-duration="1000" className="col-span-2 group mx-auto md:mx-0 md:col-span-1 shadow-xl relative bg-white px-0 rounded-lg border-b-2 border-b-[#F05A28] ">

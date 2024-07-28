@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 
 export const ContactForm = () => {
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
         <form data-aos="fade-up" data-aos-duration="1000" action="" className="h-full mx-2">

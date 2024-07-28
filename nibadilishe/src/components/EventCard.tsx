@@ -17,7 +17,7 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
     }
 
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
     // <NavLink to={""}>

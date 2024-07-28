@@ -14,7 +14,7 @@ import 'aos/dist/aos.css';
 
 export const Contacts = () => {
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
         <div>

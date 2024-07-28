@@ -7,7 +7,7 @@ export const PageHero = (props: {
     title: ReactNode; page: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined; 
 }) => {
     useEffect(()=>{
-        Aos.init();
+        AOS.init({duration:1000});
     })
     return (
         <div className="w-full mb-5">

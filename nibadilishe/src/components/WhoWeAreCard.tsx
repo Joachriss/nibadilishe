@@ -7,7 +7,7 @@ export const WhoWeAreCard = (props: {
 }) => {
     const styles = props.color + " col-span-2 md:col-span-1 shadow-lg bg-white px-0 rounded-lg ${props.color} border-b-4 ";
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className={styles}>

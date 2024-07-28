@@ -1,11 +1,11 @@
-import Aos from "aos";
+import AOS from "aos";
 import { useEffect } from "react"
 import { GoArrowRight } from "react-icons/go"
 
 
 export const NewsPaper = () => {
     useEffect(()=>{
-        Aos.init();
+        AOS.init({duration:1000});
     })
     return (
         <div>

@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 
 export const AboutUs = () => {
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
     return (
         <div className="w-full">

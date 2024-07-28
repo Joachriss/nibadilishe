@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 export const Footer = () => {
     useEffect(()=>{
-        AOS.init();
+        AOS.init({duration:1000});
     })
   return (
     <div className="w-full mt-5 py-5">
