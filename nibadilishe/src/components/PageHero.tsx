@@ -1,4 +1,4 @@
-import Aos from "aos";
+import AOS from "aos";
 import { ReactElement, JSXElementConstructor, ReactNode, useEffect } from "react";
 import { IoMdHome } from "react-icons/io";
 import { Link } from "react-router-dom";

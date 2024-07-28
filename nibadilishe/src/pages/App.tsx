@@ -34,7 +34,6 @@ function App() {
     <>
       <Navbar />
       <div className="w-full">
-      data-aos-easing="ease-in-sine"
         {/* hero portion */}
         <div className="grid h-screen items-center gap-5 md:grid-cols-2 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
           <div className='md:ps-10 -mt-20'>

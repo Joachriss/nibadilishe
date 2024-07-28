@@ -12,7 +12,7 @@ export const Footer = () => {
         AOS.init({duration:1000});
     })
   return (
-    <div className="w-full mt-5 py-5">
+    <div className="w-full mt-5 py-5 sticky">
         <NewsPaper/>
         <div data-aos='fade-up' data-aos-duration="1000" className="grid md:grid-cols-3 px-6 grid-cols-1">
             <div className="col-span-1 flex flex-col md:items-start items-center">
