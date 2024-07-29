@@ -23,9 +23,7 @@ export const Contacts = () => {
                 page="Contact us"
                 title="Contact us"
                 description="
-                    NIBADILISHE Our upcoming & completed events Lorem
-                    ipsum dolor sit amet consectetur adipisicing eliacere qui tempore
-                    earum provident tempora. Voluptas, natus qui.
+                    Reach out to us to discover how you can support our mission and drive positive change.
                 "
             />
             <div className="max-w-[1200px] mx-auto my-5 px-2">

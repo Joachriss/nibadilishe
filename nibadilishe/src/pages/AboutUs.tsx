@@ -17,20 +17,20 @@ export const AboutUs = () => {
                 page="About us"
                 title="Who are we?"
                 description="
-                 We are a women-led impact organization dedicated to positive change in our community. We tackle health, gender-based violence, and climate change through local engagement, awareness, and practical solutions for a sustainable future."
+                 We are a youth-led impact organization dedicated to positive change in our community. We tackle health, gender-based violence, and climate change through local engagement, awareness, and practical solutions for a sustainable future."
             />
             <div className="max-w-[1240px] mx-auto">
                 <div className="grid grid-cols-1 mx-auto gap-y-5 md:gap-5 md:gap-y-0 px-3 justify-center md:justify-between">
                     <div className="col-span-full grid grid-cols-1 md:grid-cols-2 gap-3">
                         <div className="col-span-full flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-3 item">
                             <div className="bg-white p-5 rounded-lg shadow-lg border-l-8 border-l-[#1EA74A] ">
-                                <div className=' text-[#38466d] font-[700] my-2 md:text-3xl text-2xl'>Mission</div>
+                                <div className=' text-[#38466d] font-[700] my-2 md:text-3xl text-2xl w-fit'>Mission <br /><hr /></div>
                                 <div className="text-justify text-lg font-[500] text-[#38466d] mb-5">
                                     NIBADILISHE's mission is to create lasting change by empowering women, promoting health, combating climate change, and ending gender-based violence. Through education, advocacy, and community action, we strive for a future where every woman in Tanzania can thrive in a safe and sustainable environment.
                                 </div>
                             </div>
                             <div className="bg-white p-5 rounded-lg shadow-lg border-l-8 border-l-[#F05A28]">
-                                <div className=' text-[#38466d] font-[700] my-2 md:text-3xl text-2xl'>Vision</div>
+                                <div className=' text-[#38466d] font-[700] my-2 md:text-3xl text-2xl w-fit'>Vision <br /><hr /></div>
                                 <div className="text-justify text-lg font-[500] text-[#38466d] mb-5">
                                     NIBADILISHE envisions a Tanzania where women and girls are empowered, healthy, and safe, with gender equality in all aspects of society. We strive for a future where women lead in addressing climate change, shaping policies, and fostering inclusive communities.
                                 </div>

@@ -73,7 +73,7 @@ export const Navbar = () => {
                                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/" >Home</NavLink>
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/About_Us" >About us</NavLink>
-                                <a href="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
+                                <a href="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:border-b-gray-700 hover:border-b-2">What we do</a>
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                                 <NavLink to="/Gallery" className={({ isActive }) => isActive ? inActive : notActive}>Gallery</NavLink>
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>

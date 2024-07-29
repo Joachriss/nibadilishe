@@ -30,7 +30,7 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
                 <div className="flex flex-row justify-between px-5 items-center">
                     {/* <div className="text-md text-gray-600  my-1 ">New round</div> */}
                 </div>
-                <div className={`text-sm duration-1000 ease-in-out md:text-sm text-start  mb-16 px-6 line-clamp-4 ${width} `}>
+                <div className={`text-sm duration-1000 ease-in-out md:text-[16px] text-start  mb-16 px-6 line-clamp-4 ${width} `}>
                     {props.description}
                 </div>
             </div> 

@@ -13,7 +13,7 @@ export const TeamCard = () => {
             <div className="mx-auto flex flex-col overflow-hidden rounded-md">
                 <img src={dummy} className="mx-auto rounded aspect-auto group-hover:scale-105 duration-200" alt="Event picture" />
                 <div className="text-2xl md:text-3xl my-2 px-6 text-[#38466d] text-center font-[400] duration-200 font-['quicksand-bold']">Member name</div>
-                <div className="text-lg text-gray-600 font-[600] text-center mb-2 ">Job tittle</div>
+                <div className=" text-lg text-gray-400  text-center mb-2 w-fit mx-auto">Founder <br /><hr/></div>
                 <div className="text-md text-justify mb-5 px-6">
                     Lorem ipsum, dolor sit amet consectetur e illum nisi nobis, debitis cupiditate voluptatum eveniet! Nesciunt!
                 </div>

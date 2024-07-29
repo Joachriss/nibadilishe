@@ -10,14 +10,14 @@ export const PageHero = (props: {
         AOS.init({duration:1000});
     })
     return (
-        <div className="w-full mb-5">
+        <div className="w-full mb-5 bg-[url('./assets/images/hero.jpg')] bg-right bg-opacity-25 bg-cover">
             <div className="mx-auto max-w-[1200px] px-5 md:px-2">
                 <div className="flex flex-col">
-                    <div className='flex fle-row text-gray-500 font-[500] md:text-lg text-sm my-3'>
-                        <Link to="/" className="flex flex-row items-center"><IoMdHome /><span className="hover:text-gray-900">Home</span></Link>/{props.page}
+                    <div className='flex fle-row text-gray-50 font-[500] md:text-lg text-sm my-3'>
+                        <Link to="/" className="flex flex-row items-center"><IoMdHome /><span className="hover:font-bold">Home</span></Link>/<span className="underline">{props.page}</span>
                     </div>
-                    <div data-aos="fade-right" data-aos-duration="1000" className="text-center text-[#F05A28] font-[700] font-['quicksand-bold'] md:text-4xl text-3xl mb-3">{props.title}</div>
-                    <div className=" text-lg md:text-xl text-center font-[700] text-[#38466d] mb-5">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="text-start text-[#F05A28] font-[700] font-['quicksand-bold'] md:text-5xl text-4xl mb-3">{props.title}</div>
+                    <div className=" text-lg md:text-xl text-start font-[700] text-[#ffffff] mb-5">
                         {props.description}
                     </div>
                 </div>

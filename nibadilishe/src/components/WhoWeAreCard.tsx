@@ -14,7 +14,7 @@ export const WhoWeAreCard = (props: {
             <div className="mx-auto flex flex-col p-5">
                 {/* <img src={dummy} className="mx-auto rounded-lg aspect-[]" alt="Event picture" /> */}
                 <div className="text-2xl md:text-xl text-start my-3 font-['quicksand-bold']">{props.objective}</div>
-                <hr />
+                <hr className=' border-2'/>
                 <div className="text-sm md:text-lg text-start mb-5">
                     {props.description}
                 </div>
