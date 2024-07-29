@@ -62,8 +62,8 @@ function App() {
         <div className="mx-auto max-w-[1240px] flex flex-col space-y-5">
 
           {/* what we do */}
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 px-3" id="whatWeDo">
-            <div className="col-span-2">
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 px-3" id="whatWeDo">
+            <div className="col-span-full">
               <div className='text-center mt-14 text-[#F05A28] font-[500] md:text-4xl text-3xl'>What we do</div>
               {/* <div className='text-center text-[#1EA74A] text-2xl md:text-2xl'>What we do</div> */}
               <div className=" text-2xl md:text-2xl text-center font-[500] text-[#38466d] mb-5">

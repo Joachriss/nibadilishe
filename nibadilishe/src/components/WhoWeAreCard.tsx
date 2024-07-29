@@ -1,5 +1,5 @@
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, useEffect } from 'react'
-import dummy from '../assets/images/dummy.jpg'
+// import dummy from '../assets/images/dummy.jpg'
 import AOS from 'aos';
 
 export const WhoWeAreCard = (props: {
@@ -11,10 +11,11 @@ export const WhoWeAreCard = (props: {
     })
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className={styles}>
-            <div className="mx-auto flex flex-col">
-                <img src={dummy} className="mx-auto rounded-lg aspect-[]" alt="Event picture" />
-                <div className="text-2xl md:text-3xl text-center my-3 font-['quicksand-bold']">{props.objective}</div>
-                <div className="text-sm md:text-lg text-center mb-5 px-6">
+            <div className="mx-auto flex flex-col p-5">
+                {/* <img src={dummy} className="mx-auto rounded-lg aspect-[]" alt="Event picture" /> */}
+                <div className="text-2xl md:text-xl text-start my-3 font-['quicksand-bold']">{props.objective}</div>
+                <hr />
+                <div className="text-sm md:text-lg text-start mb-5">
                     {props.description}
                 </div>
             </div>

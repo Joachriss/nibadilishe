@@ -18,10 +18,10 @@ export const Footer = () => {
             <div className="col-span-1 flex flex-col md:items-start items-center">
                 <img src={nibadilishe} className='md:w-[70%] w-[60%]' alt="" />
                 <div className="mt-4 flex space-x-4 px-4 flex-row items-center ">
-                    <BsInstagram size={27}/>
-                    <BsFacebook size={27} />
-                    <BsTwitter size={27} />
-                    <BsLinkedin size={27} />
+                    <BsInstagram size={30}/>
+                    <BsFacebook size={30} />
+                    <BsTwitter size={30} />
+                    <BsLinkedin size={30} />
                 </div>
             </div>
 

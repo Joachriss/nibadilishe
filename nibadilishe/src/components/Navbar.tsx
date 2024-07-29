@@ -6,8 +6,8 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
     const [nav, setNav] = useState(false);
-    const inActive = "' bg-gray-700 text-white rounded-md px-2 py-3 text-md font-medium '";
-    const notActive = "' rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white duration-150 ease-in-out '";
+    const inActive = "' border-b-4 border-b-gray-700 text-gray-700 rounded-md px-2 py-3 text-md font-medium font-bold'";
+    const notActive = "' rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:border-b-gray-700 hover:border-b-2 duration-150 ease-in-out '";
     function navToggle(){
         setNav(!nav);
     }
@@ -24,7 +24,7 @@ export const Navbar = () => {
                             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/" >Home</NavLink>
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/About_Us" >About us</NavLink>
-                            <a href="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:bg-gray-700 hover:text-white">What we do</a>
+                            <a href="#whatWeDo" className="rounded-md px-2 py-3 text-md font-medium text-gray-800 hover:border-b-gray-700 hover:border-b-2">What we do</a>
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                             <NavLink to="/Gallery" className={({ isActive }) => isActive ? inActive : notActive}>Gallery</NavLink>
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>

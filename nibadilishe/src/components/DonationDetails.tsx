@@ -9,14 +9,14 @@ export const DonationDetails = () => {
     return (
         <div className="p-2">
             <div data-aos="fade-up" className="h-full col-span-1 text-[#38466d] rounded-3xl bg-white p-3 md:p-10 flex flex-col space-y-4 shadow-lg">
-                <table className="table-auto">
+                <table className="table-auto border-separate border-spacing-y-5">
                     <thead>
                         <tr>
-                            <th className="font-['quicksand-bold'] text-start">Card</th>
-                            <th className="font-['quicksand-bold'] text-start">Details</th>
+                            <th className="font-['quicksand-bold'] text-start">ITEM</th>
+                            <th className="font-['quicksand-bold'] text-start">DESCRIPTION</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className=''>
                         <tr>
                             <td>NBC BANK</td>
                             <td className="font-['quicksand-bold'] ">000000000000000000</td>

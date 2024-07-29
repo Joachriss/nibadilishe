@@ -55,13 +55,14 @@ export const AboutUs = () => {
 
             {/* OUR TEAM SECTION */}
             <div className="max-w-[1240px] mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 mx-auto gap-y-5 md:gap-5 md:gap-y-0 px-3 justify-center md:justify-between">
+                <div className="grid grid-cols-1 md:grid-cols-4 mx-auto gap-y-5 md:gap-5 md:gap-y-0 px-3 justify-center md:justify-between">
                     <div className="col-span-full my-6">
                         <div className='text-center text-[#F05A28] font-[500] md:text-4xl text-3xl'>Meet Our Team</div>
                         <div className=" text-md md:text-xl text-center font-[500] text-[#38466d] mb-5">
                             Our team at Nibadilishe drives positive change with collaboration and compassion.
                         </div>
                     </div>
+                    <TeamCard/>
                     <TeamCard/>
                     <TeamCard/>
                     <TeamCard/>
