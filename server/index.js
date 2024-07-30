@@ -1,6 +1,7 @@
 import express from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
+import userModel from "./models/userModel.js";
 
 const app = express();
 
@@ -16,3 +17,9 @@ mongoose.connect(MONGOURL).then(() =>{
     });
 
 }).catch((err) => console.log(err));
+
+app.get('/users',async (req,res)=>{
+    userModel.find().then((data)=>{
+        res.send(data);
+    })
+})
