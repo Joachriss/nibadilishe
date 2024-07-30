@@ -13,7 +13,7 @@ export const WhoWeAreCard = (props: {
     return (
         <div data-aos="fade-up" data-aos-duration="1000" className={styles}>
             <div className="mx-auto flex flex-col p-5">
-                <div className='w-full h-[380px] overflow-hidden'>
+                <div className='w-full max-h-[380px] overflow-hidden'>
                     <img src={props.picture} className="mx-auto rounded-lg" alt="Event picture" />
                 </div>
                 <div className="text-2xl md:text-xl text-start my-3 font-['quicksand-bold']">{props.objective}</div>

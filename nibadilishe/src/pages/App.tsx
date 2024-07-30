@@ -39,9 +39,9 @@ function App() {
       <Navbar />
       <div className="w-full">
         {/* hero portion */}
-        <div className="grid h-screen items-center gap-5 md:grid-cols-2 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
-          <div className='md:ps-10 -mt-20'>
-            <div data-aos-easing="ease-in-sine" data-aos-duration="800" data-aos-offset="300" data-aos="fade-right" className="md:text-5xl text-3xl text-center md:text-start font-['quicksand-bold'] font-[500] text-[#FFF]">
+        <div className="grid h-screen items-center gap-5 md:grid-cols-3 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
+          <div className='md:ps-10 -mt-20 col-span-2'>
+            <div data-aos-easing="ease-in-sine" data-aos-duration="800" data-aos-offset="300" data-aos="fade-right" className="md:text-4xl text-3xl text-center md:text-start font-['quicksand-bold'] font-[500] text-[#FFF]">
               {/* Empowering women, driving change through health, equality, and climate action. */}
               {/* Empowering communities for a sustainable future. <br />
               Impact-driven NGO led by youth. */}

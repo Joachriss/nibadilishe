@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsTiktok, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { ContactForm } from "../components/ContactForm";
 import { PageHero } from "../components/PageHero";
 import { NavLink } from "react-router-dom";
@@ -45,7 +45,7 @@ export const Contacts = () => {
                                 <FaPhoneAlt size={30} />
                                 <div className="ps-4">
                                     <span className=" text-lg font-bold">Phone number</span><br />
-                                    <span className=" text-lg">+255 658 191 222</span>
+                                    <span className=" text-lg">+255 674 696 560</span>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center">
@@ -61,7 +61,7 @@ export const Contacts = () => {
                                 <span className=" text-lg font-bold mb-4">Follow Us:</span><br />
                                 <div className="flex space-x-4 flex-row items-center ">
                                     <BsInstagram size={30} />
-                                    <BsFacebook size={30} />
+                                    <BsTiktok  size={30} />
                                     <BsTwitter size={30} />
                                     <BsLinkedin size={30} />
                                 </div>

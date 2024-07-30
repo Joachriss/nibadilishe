@@ -1,5 +1,5 @@
 import nibadilishe from '../assets/images/Nibadilishe.png'
-import { BsFacebook, BsInstagram, BsLinkedin, BsTwitter} from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTiktok, BsTwitter} from "react-icons/bs";
 import { NewsPaper } from './NewsPaper';
 import { NavLink } from 'react-router-dom';
 import AOS from 'aos';
@@ -18,8 +18,8 @@ export const Footer = () => {
             <div className="col-span-1 flex flex-col md:items-start items-center">
                 <img src={nibadilishe} className='md:w-[70%] w-[60%]' alt="" />
                 <div className="mt-4 flex space-x-4 px-4 flex-row items-center text-gray-800">
-                    <BsInstagram size={30}/>
-                    <BsFacebook size={30} />
+                    <a href="https://www.instagram.com/nibadilishe_organization?igsh=MWM2aWU5ZTA3NWhvNw=="><BsInstagram size={30}/></a>
+                    <BsTiktok  size={30} />
                     <BsTwitter size={30} />
                     <BsLinkedin size={30} />
                 </div>

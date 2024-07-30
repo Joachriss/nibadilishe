@@ -17,7 +17,7 @@ export const PageHero = (props: {
                         <Link to="/" className="flex flex-row items-center"><IoMdHome /><span className="hover:font-bold">Home</span></Link>/<span className="underline">{props.page}</span>
                     </div>
                     <div data-aos="fade-right" data-aos-duration="1000" className="text-start text-[#F05A28] font-[700] font-['quicksand-bold'] md:text-5xl text-4xl mb-3">{props.title}</div>
-                    <div className=" text-lg md:text-xl text-start font-[700] text-[#ffffff] mb-5">
+                    <div className=" text-lg md:text-lg text-start font-[700] text-[#ffffff] mb-5">
                         {props.description}
                     </div>
                 </div>

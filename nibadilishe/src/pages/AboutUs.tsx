@@ -3,10 +3,14 @@ import { Footer } from "../components/Footer"
 import { Navbar } from "../components/Navbar"
 import { PageHero } from "../components/PageHero"
 import { TeamCard } from "../components/TeamCard"
+import sophie from '../assets/team/sophie.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export const AboutUs = () => {
+    const team =[
+        {id:1, name:'Sophia Evodius', picture:sophie, tittle:'Chairwoman', description: 'lorem youth-led impact organization dedicated to positive change in our community. We tackle health,'}
+    ];
     useEffect(()=>{
         AOS.init({duration:1000});
     })
@@ -70,10 +74,9 @@ export const AboutUs = () => {
                             Our team at Nibadilishe drives positive change with collaboration and compassion.
                         </div>
                     </div>
-                    <TeamCard/>
-                    <TeamCard/>
-                    <TeamCard/>
-                    <TeamCard/>
+                    {
+                        team.map((person)=>{return <TeamCard  picture={person.picture} name={person.name} tittle={person.tittle} description={person.description}/>})
+                    }
                 </div>
             </div>
             <Footer />
