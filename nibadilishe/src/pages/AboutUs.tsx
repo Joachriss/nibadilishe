@@ -5,7 +5,6 @@ import { PageHero } from "../components/PageHero"
 import { TeamCard } from "../components/TeamCard"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { RiEmphasis } from "react-icons/ri"
 
 export const AboutUs = () => {
     useEffect(()=>{

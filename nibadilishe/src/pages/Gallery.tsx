@@ -3,6 +3,7 @@ import { Navbar } from "../components/Navbar"
 import { PageHero } from "../components/PageHero"
 import { PictureGallery } from "../components/PictureGallery"
 
+
 export const Gallery = () => {
   return (
     <div>
