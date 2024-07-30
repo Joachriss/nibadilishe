@@ -15,7 +15,6 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
             setWidth('line-clamp-4')
         }
     }
-
     useEffect(()=>{
         AOS.init({duration:1000});
     })
@@ -26,9 +25,10 @@ export const EventCard = (props: { picture: string | undefined; name: string | n
                 <div className="overflow-hidden h-[200px] rounded-lg">
                     <img src={props.picture} className="mx-auto rounded-lg aspect-auto group-hover:scale-105 duration-200" alt="Event picture" />
                 </div>
-                <div className="text-2xl md:text-xl my-5 px-6 text-[#38466d] font-[400] group-hover:text-[#F05A28] duration-200 font-['quicksand-bold']">{props.name}</div>
+                <div className="text-2xl md:text-xl my-5 px-6 text-[#38466d] font-[400] duration-200 font-['quicksand-bold']">{props.name}</div>
                 <div className="flex flex-row justify-between px-5 items-center">
-                    {/* <div className="text-md text-gray-600  my-1 ">New round</div> */}
+
+                {/* <div className="text-md text-gray-600  my-1 ">New round</div> */}
                 </div>
                 <div className={`text-sm duration-1000 ease-in-out md:text-[16px] text-start  mb-16 px-6 line-clamp-4 ${width} `}>
                     {props.description}

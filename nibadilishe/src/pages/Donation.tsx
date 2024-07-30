@@ -16,7 +16,7 @@ export const Donation = () => {
       <Navbar />
       <PageHero description="Transform lives with your generous donations to our NGO." title="Donation" page='Donate' />
       <div className="w-full">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1200px] mx-auto my-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div data-aos='fade-up' className="col-span-1 text-center px-5 md:px-1 text-[#38466d]">
               <img src={donate} className="w-[50%] mx-auto" alt="donation picture" />

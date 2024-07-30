@@ -21,7 +21,7 @@ export const Contacts = () => {
             <Navbar />
             <PageHero
                 page="Contact us"
-                title="Contact us"
+                title="Our Contacts"
                 description="
                     Reach out to us to discover how you can support our mission and drive positive change.
                 "
@@ -31,7 +31,7 @@ export const Contacts = () => {
                     <div data-aos="fade-up" data-aos-duration="1000" className="col-span-1 px-5 md:px-1 text-[#38466d]">
                         <div className=" text-[#38466d] font-[500] font-['quicksand-bold'] md:text-3xl text-2xl">Get in touch</div>
                         <div className=" text-md md:text-lg font-[500] text-[#38466d] mb-5">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat optio atque repellendus fuga eligendi aut voluptatibus nemo labore, impedit ipsam.
+                            We'd love to hear from you! For questions, involvement, or more information about our initiatives, reach out to us. Together, we can drive positive change in our communities.
                         </div>
                         <div className="flex flex-col text-start space-y-5">
                             <div className="flex flex-row items-center">

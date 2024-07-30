@@ -3,6 +3,7 @@ import nibadilishe from '../assets/images/Nibadilishe.png';
 import ScrollToTop from "react-scroll-to-top";
 import { Totop } from "./Totop";
 import { Link, NavLink } from "react-router-dom";
+import { MdOutlineFavorite } from "react-icons/md";
 
 export const Navbar = () => {
     const [nav, setNav] = useState(false);
@@ -28,7 +29,8 @@ export const Navbar = () => {
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                             <NavLink to="/Gallery" className={({ isActive }) => isActive ? inActive : notActive}>Gallery</NavLink>
                             <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>
-                            <NavLink to="/Donate" className="rounded-md bg-[#F05A28] px-4 py-3 text-md font-medium text-white" aria-current="page">Donate</NavLink>
+                            <div className="border-2"></div>
+                            <NavLink to="/Donate" className="rounded-full hover:bg-[#a84c2d] bg-[#F05A28] duration-200 px-4 py-3 text-md font-medium text-white flex flex-row items-center" aria-current="page">Donate <MdOutlineFavorite className="duration-200 ms-2"/></NavLink>
                         </div>
                     </div>
                     <div className="inset-y-0 left-0 flex items-center lg:hidden">
@@ -77,7 +79,12 @@ export const Navbar = () => {
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Our_Events" >Events</NavLink>
                                 <NavLink to="/Gallery" className={({ isActive }) => isActive ? inActive : notActive}>Gallery</NavLink>
                                 <NavLink className={({ isActive }) => isActive ? inActive : notActive} to="/Contact_Us" >Contact Us</NavLink>
-                                <NavLink to='/Donate' className="rounded-md text-center   bg-[#F05A28] px-4 py-5 text-md font-medium text-white" aria-current="page">Donate</NavLink>
+                                <hr />
+
+                                <div>
+                                    <NavLink to='/Donate' className="rounded-full mt-6 bg-[#F05A28] px-4 py-5 text-md font-medium text-white  flex flex-row items-center justify-center" aria-current="page">Donate<MdOutlineFavorite className="ms-2"/></NavLink>
+
+                                </div>
                             </div>
                         </div>
                     </div>
