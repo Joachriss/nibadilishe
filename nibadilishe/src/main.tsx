@@ -9,33 +9,40 @@ import { Contacts } from './pages/Contacts.tsx';
 import { AboutUs } from './pages/AboutUs.tsx';
 import { Donation } from './pages/Donation.tsx';
 import { Gallery } from './pages/Gallery.tsx';
+import { Layout } from './components/Layout.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<App/>,
-    errorElement:<RouterErrorPage/>
+    element:<Layout/>,
+    errorElement:<RouterErrorPage/>,
+    children: [
+      {
+        index: true,
+        element: <App />
+      },
+      {
+        path: '/Our_Events',
+        element: <Events />
+      },
+      {
+        path: '/Contact_Us',
+        element: <Contacts />
+      },
+      {
+        path: '/About_Us',
+        element: <AboutUs />
+      },
+      {
+        path: '/Donate',
+        element: <Donation />
+      },
+      {
+        path: '/Gallery',
+        element: <Gallery />
+      }
+    ]
   },
-  {
-    path:'/Our_Events',
-    element:<Events/>
-  },
-  {
-    path:'/Contact_Us',
-    element:<Contacts/>
-  },
-  {
-    path:'/About_Us',
-    element:<AboutUs/>
-  },
-  {
-    path:'/Donate',
-    element:<Donation/>
-  },
-  {
-    path:'/Gallery',
-    element:<Gallery/>
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

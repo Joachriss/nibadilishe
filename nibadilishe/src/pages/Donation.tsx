@@ -13,7 +13,6 @@ export const Donation = () => {
   })
   return (
     <div>
-      <Navbar />
       <PageHero description="Transform lives with your generous donations to our NGO." title="Donation" page='Donate' />
       <div className="w-full">
         <div className="max-w-[1200px] mx-auto my-10">
@@ -30,7 +29,6 @@ export const Donation = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   )
 }

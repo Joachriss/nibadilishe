@@ -18,7 +18,6 @@ export const Contacts = () => {
     })
     return (
         <div>
-            <Navbar />
             <PageHero
                 page="Contact us"
                 title="Our Contacts"
@@ -74,7 +73,6 @@ export const Contacts = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -16,7 +16,6 @@ export const AboutUs = () => {
     })
     return (
         <div className="w-full">
-            <Navbar />
             <PageHero
                 page="About us"
                 title="Who are we?"
@@ -75,11 +74,10 @@ export const AboutUs = () => {
                         </div>
                     </div>
                     {
-                        team.map((person)=>{return <TeamCard  picture={person.picture} name={person.name} tittle={person.tittle} description={person.description}/>})
+                        team.map((person)=>{return <TeamCard key={person.id} picture={person.picture} name={person.name} tittle={person.tittle} description={person.description}/>})
                     }
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

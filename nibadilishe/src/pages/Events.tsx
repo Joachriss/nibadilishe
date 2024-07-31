@@ -28,7 +28,6 @@ export const Events = () => {
       ]
     return (
         <div>
-            <Navbar />
             <PageHero
                 page="Events"
                 title="Events"
@@ -40,7 +39,6 @@ export const Events = () => {
                     
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -36,7 +36,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
       <div className="w-full">
         {/* hero portion */}
         <div className="grid h-screen items-center gap-5 md:grid-cols-3 px-3 bg-[url('./assets/images/hero.jpg')] bg-cover bg-center relative">
@@ -117,7 +116,6 @@ function App() {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   )
