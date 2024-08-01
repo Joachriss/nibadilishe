@@ -12,11 +12,13 @@ router.get(
     }
 );
 
-// router.post(
-//     "/api/createUser",
-//     (req,res)=>{
-//         req.
-//     }
-// );
+router.post(
+    "/api/createUser", async (req,res)=>{
+        let user = new userModel(req.body);
+        let result = await user.save();
+        console.log(result);
+
+    }
+);
 
 export default router;
