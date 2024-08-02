@@ -10,6 +10,10 @@ import { AboutUs } from './pages/AboutUs.tsx';
 import { Donation } from './pages/Donation.tsx';
 import { Gallery } from './pages/Gallery.tsx';
 import { Layout } from './components/Layout.tsx';
+import { Register } from './staff/Register.tsx';
+import { Login } from './staff/Login.tsx';
+import { StaffLayout } from './components/StaffLayout.tsx';
+import { Dashboard } from './staff/Dashboard.tsx';
 
 const router = createBrowserRouter([
   {
@@ -40,9 +44,28 @@ const router = createBrowserRouter([
       {
         path: '/Gallery',
         element: <Gallery />
-      }
+      },
+      
     ]
   },
+  {
+    path: "/staff",
+    element:<StaffLayout />,
+    children:[
+      {
+        index:true,
+        element:<Login/>
+      },
+      {
+        path: '/staff/register',
+        element: <Register />
+      },
+      {
+        path: '/staff/dashboard',
+        element: <Dashboard />
+      },
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
