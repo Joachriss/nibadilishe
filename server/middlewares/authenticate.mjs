@@ -1,5 +1,7 @@
 import { body, validationResult } from "express-validator";
 import userModel from "../models/userModel.js";
+import bcrypt from "bcrypt";
+
 
 const userRegistrationValidation = () => [
     // Validate and sanitize inputs
@@ -26,4 +28,20 @@ const userRegistrationValidation = () => [
     }
 ];
 
-export default { userRegistrationValidation, };
+// login
+const userLogin = async (req,res)=>{
+    const {email, password} = req.body;
+    const user = await userModel.findOne({email:email});
+    if(!user){
+        
+        return res.send('noUser');
+    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if(!isMatch){
+        
+        return res.send('incorrectPassword');
+    }
+    res.send('successful');
+}
+
+export default { userRegistrationValidation, userLogin };

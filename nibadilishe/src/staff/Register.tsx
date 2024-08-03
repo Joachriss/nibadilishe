@@ -25,8 +25,8 @@ export const Register = () => {
     e.preventDefault();
     const userData = { name: name, email: email, password: password, confirmPassword: confirmPassword };
     axios.post('http://127.0.0.1:5000/api/createUser', userData)
-      .then(res => {setResponse(res.data); console.log(res)})
-      .catch(err => { setAxierror(err.response.data.errors[0].msg); console.log(err) });
+      .then(res => {setResponse(res.data)})
+      .catch(err => { setAxierror(err.response.data.errors[0].msg)});
   }
 
   let message;
@@ -53,7 +53,7 @@ export const Register = () => {
             {/* {response.length == 0  ? (<div className="bg-red-400 rounded-lg text-center p-3 text-white">{axierror}</div>)
             
            : (<div className="bg-green-400 rounded-lg text-center p-3 text-white">{response}</div>)} */}
-            {message}
+            {message} 
             <input required value={name} onChange={e => setName(e.target.value)} className="w-full border-2 text-md focus:outline-none focus:border-b-[#38466d] focus:border-b-4 md:text-lg border-gray-300 rounded-md border-t-0 border-x-0 p-3" type="text" placeholder="Name" id="name" autoComplete="on" name="name" />
             <input required value={email} onChange={e => setEmail(e.target.value)} className="w-full border-2 text-md focus:outline-none focus:border-b-[#38466d] focus:border-b-4 md:text-lg border-gray-300 rounded-md border-t-0 border-x-0 p-3" type="text" placeholder="E-mail" id="email" autoComplete="on" name="email"/>
             <div className="flex flex-row">

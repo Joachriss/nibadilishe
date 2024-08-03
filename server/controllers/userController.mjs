@@ -1,12 +1,15 @@
 import userModel from "../models/userModel.js";
 import bcrypt from "bcrypt";
+// registration
 const registerUser =  async  (req,res)=>{
     let user = new userModel(req.body);
-    user.password = await bcrypt.hash(user.password, 10);
-    let result = await user.save();
+    user.password = await bcrypt.hash(user.password, 12);
+    await user.save();
     res.send(['Registration complete']);
 
 }
+
+
 
 // const loginUser =  async  (req,res)=>{}
 
@@ -16,4 +19,4 @@ const returnUsers = async (req,res)=>{
     })
 }
 
-export default{registerUser,returnUsers}
+export default{registerUser,returnUsers,}
