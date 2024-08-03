@@ -7,8 +7,14 @@ import usersRouter from "./routers/usersRouter.mjs";
 // const userRouter = require('./routers/userRoutes');
 
 const app = express();
+import mongoSanitize from 'express-mongo-sanitize';
+
 app.use(cors());
 app.use(express.json());
+app.use(mongoSanitize());
+
+
+// routes
 app.use(usersRouter);
 
 dotenv.config();
