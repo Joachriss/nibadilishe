@@ -2,16 +2,17 @@ import express, { json } from "express"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
 import cors from 'cors'
-// import userModel from "./models/userModel.js";
 import usersRouter from "./routers/usersRouter.mjs";
-// const userRouter = require('./routers/userRoutes');
 
 const app = express();
 import mongoSanitize from 'express-mongo-sanitize';
+import xssClean from "xss-advanced";
 
+// middlewares
 app.use(cors());
 app.use(express.json());
 app.use(mongoSanitize());
+app.use(xssClean());
 
 
 // routes
