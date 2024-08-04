@@ -34,14 +34,14 @@ const userLogin = async (req,res)=>{
     const user = await userModel.findOne({email:email});
     if(!user){
         
-        return res.send('noUser');
+        return res.json({login: false ,message:'noUser'});
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if(!isMatch){
         
-        return res.send('incorrectPassword');
+        return res.json({login: false,message:'incorrectPassword'});
     }
-    res.send('successful');
+    return res.json({login:true, message:'successful'});
 }
 
 export default { userRegistrationValidation, userLogin };
