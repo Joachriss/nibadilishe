@@ -1,7 +1,7 @@
 import AOS from 'aos'
 import { useEffect, useState } from 'react'
 import { FaCheckCircle } from "react-icons/fa"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 
 export const Login = () => {
@@ -10,11 +10,12 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
   const [errors, setErrors] = useState("");
+  const navigate = useNavigate();
   function handleLogin(e: { preventDefault: () => void; }){
     e.preventDefault();
     const userData = { email: email, password: password };
     axios.post('http://127.0.0.1:5000/api/login',userData)
-    .then(res=>{setResponse(res.data)})
+    .then(res=>{setResponse(res.data.message); if(res.data.login){navigate('/staff')}})
     .catch(err=>{setErrors(err.message)});
   }
 

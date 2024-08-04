@@ -2,7 +2,7 @@ import { FaCheckCircle } from "react-icons/fa"
 import AOS from 'aos'
 import { useEffect, useState } from "react"
 import axios from 'axios';
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { BiSolidHide, BiSolidShow } from "react-icons/bi";
 
 export const Register = () => {
@@ -12,6 +12,7 @@ export const Register = () => {
   const [name, setName] = useState("");
   const [axierror, setAxierror] = useState('');
   const [response, setResponse] = useState('');
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -25,7 +26,7 @@ export const Register = () => {
     e.preventDefault();
     const userData = { name: name, email: email, password: password, confirmPassword: confirmPassword };
     axios.post('http://127.0.0.1:5000/api/createUser', userData)
-      .then(res => {setResponse(res.data)})
+      .then(res => {setResponse(res.data); navigate('/staff')})
       .catch(err => { setAxierror(err.response.data.errors[0].msg)});
   }
 
