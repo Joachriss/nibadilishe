@@ -13,4 +13,7 @@ router.post("/api/createUser",authenticate.userRegistrationValidation(), userCon
 // login
 router.post('/api/login',authenticate.userLogin);
 
+// user profile
+router.get('/api/profile',authenticate.getProfile)
+
 export default router;

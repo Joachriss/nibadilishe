@@ -1,7 +1,10 @@
 import { body, validationResult } from "express-validator";
 import userModel from "../models/userModel.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import dotenv from 'dotenv'
 
+dotenv.config();
 
 const userRegistrationValidation = () => [
     // Validate and sanitize inputs
@@ -29,19 +32,38 @@ const userRegistrationValidation = () => [
 ];
 
 // login
-const userLogin = async (req,res)=>{
-    const {email, password} = req.body;
-    const user = await userModel.findOne({email:email});
-    if(!user){
-        
-        return res.json({login: false ,message:'noUser'});
+const userLogin = async (req, res) => {
+    const { email, password } = req.body;
+    const user = await userModel.findOne({ email: email });
+    if (!user) {
+        return res.json({ login: false, error: 'No user found' });
     }
     const isMatch = await bcrypt.compare(password, user.password);
-    if(!isMatch){
-        
-        return res.json({login: false,message:'incorrectPassword'});
+    if (!isMatch) {
+        return res.json({ login: false, error: 'Invalid password' });
     }
-    return res.json({login:true, message:'successful'});
+    // if matches
+    if (isMatch) {
+        jwt.sign({ email: user.email, id: user._id, name: user.name },process.env.JWT_SECRET,{},(err, token) => {
+            if (err) {throw err;}
+            res.cookie('token',token).json(user);
+            // return res.json({login:true, message:'successful'});
+        });
+    }
 }
 
-export default { userRegistrationValidation, userLogin };
+// user profile jwt token 
+const getProfile = (req, res) => {
+    const {token} = req.cookies;
+    if (token) {
+      jwt.verify(token, process.env.JWT_SECRET, {}, (err, user) => {
+        if (err) throw err;
+        res.json(user);
+      });
+    } else {
+      res.json(null);
+    }
+  
+  };
+
+export default { userRegistrationValidation, userLogin, getProfile };

@@ -3,22 +3,30 @@ import mongoose from "mongoose"
 import dotenv from "dotenv"
 import cors from 'cors'
 import usersRouter from "./routers/usersRouter.mjs";
+import cookieParser from "cookie-parser";
 
 const app = express();
 import mongoSanitize from 'express-mongo-sanitize';
 import xssClean from "xss-advanced";
 
-// middlewares
-app.use(cors());
+// MIDDLEWARES
+app.use(cors({
+    // Credentials : true,
+    // origin :"http:/127.0.0.1:5173",
+}));
 app.use(express.json());
 app.use(mongoSanitize());
 app.use(xssClean());
 
+// json middlewares
+app.use(cookieParser());
+app.use(express.urlencoded({ extended: false }));
+
+dotenv.config();
 
 // routes
 app.use(usersRouter);
 
-dotenv.config();
 
 const PORT = process.env.PORT || 5010;
 const MONGOURL = process.env.MONGO_URL;
@@ -30,4 +38,4 @@ mongoose.connect(MONGOURL).then(() =>{
     });
 
 }).catch((err) => console.log(err));
-
+ 
