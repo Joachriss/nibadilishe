@@ -11,7 +11,7 @@ export const StaffHero = (props: {
     })
     return (
         <div className="w-full mb-5 bg-[url('./assets/images/hero.jpg')] bg-right bg-opacity-25 bg-cover">
-            <div className="mx-auto max-w-[1200px] px-5 md:px-2">
+            <div className="mx-auto max-w-[1240px] px-2">
                 <div className="flex flex-col">
                     <div className='flex fle-row text-gray-50 font-[500] md:text-lg text-sm my-3'>
                         <Link to="/staff/dashboard" className="flex flex-row items-center"><IoMdHome /><span className="hover:font-bold">Home</span></Link>/<span className="underline">{props.page}</span>

@@ -26,7 +26,7 @@ export const Register = () => {
     e.preventDefault();
     const userData = { name: name, email: email, password: password, confirmPassword: confirmPassword };
     axios.post('http://127.0.0.1:5000/api/createUser', userData)
-      .then(res => {setResponse(res.data); navigate('/staff')})
+      .then(res => {if(res.data.register){setResponse(res.data.message); navigate('/staff/login')}})
       .catch(err => { setAxierror(err.response.data.errors[0].msg)});
   }
 

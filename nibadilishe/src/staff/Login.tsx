@@ -10,30 +10,24 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const [response, setResponse] = useState("");
   const [errors, setErrors] = useState("");
+  const [responseErrors, setResponseErrors] = useState("");
   const navigate = useNavigate();
   function handleLogin(e: { preventDefault: () => void; }){
     e.preventDefault();
-    const userData = { email: email, password: password };
+    const userData={ email: email, password: password };
     axios.post('http://127.0.0.1:5000/api/login',userData)
-    .then(res=>{setResponse(res.data.message); if(res.data.login){navigate('/staff')}})
+    .then(res=>{if(res.data.message){setResponse(res.data.message)};if(res.data.error){setResponseErrors(res.data.error)}; navigate('/staff')})
     .catch(err=>{setErrors(err.message)});
   }
 
   let message;
-  if (response==="noUser") {
+  if (responseErrors) {
     message = (
       <div className="bg-red-400 rounded-lg text-center p-3 text-white">
-        User not found
+        {responseErrors}
       </div>
     );
   } 
-  else if (response==="incorrectPassword") {
-    message = (
-      <div className="bg-red-400 rounded-lg text-center p-3 text-white">
-        Wrong password
-      </div>
-    );
-  }
   else if (errors.length > 0) {
     message = (
       <div className="bg-red-400 rounded-lg text-center p-3 text-white">
@@ -41,10 +35,10 @@ export const Login = () => {
       </div>
     );
   }
-  else if(response === 'successful'){
+  else if(response){
     message = (
       <div className="bg-green-400 rounded-lg text-center p-3 text-white">
-        Login successiful
+        {response}
       </div>
     );
   }
